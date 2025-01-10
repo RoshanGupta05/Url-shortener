@@ -26,6 +26,8 @@ Copy code
 2. GET /:shortURL
 Description: Redirects to the original URL using the shortened URL.
 Example: Access http://localhost:8080/abc123 to be redirected to the original URL.
+
+
 3. GET /metrics
 Description: Returns the top 3 domains that have been shortened the most times.
 Response:
@@ -59,17 +61,3 @@ Copy code
 go run main.go
 The server will start on http://localhost:8080.
 
-Docker (Optional)
-To run the application inside a Docker container, follow these steps:
-
-Build the Docker image:
-
-bash
-Copy code
-docker build -t url-shortener .
-Run the Docker container:
-
-bash
-Copy code
-docker run -p 8080:8080 url-shortener
-The application will be accessible at http://localhost:8080 inside the container.
